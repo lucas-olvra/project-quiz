@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Fredoka", "PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+#title {
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #a2a2bd;
+}
+
+.select-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.select-text {
+  padding: 10px 0;
+}
+
+#select {
+  height: 50px;
+  border-radius: 8px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#quiz {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.result {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: azure;
+  text-align: center;
+}
+
+#corrects {
+  background-color: #a3e635;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 12px;
+}
+
+dialog {
+  background-color: rgb(212, 50, 50);
+  animation: rotation 0.5s ease infinite;
+  border-radius: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

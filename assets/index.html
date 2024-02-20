@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="title">TEST YOUR KNOWLEDGE</h1>
+
+    <div class="select-option">
+      <span class="select-text"
+        >Select a language/tool to complete your QUIZ:</span
+      >
+      <select name="select" id="select">
+        <option value="0">JavaScript</option>
+        <option value="1">QA</option>
+        <option value="2">Cypress</option>
+      </select>
+    </div>
+
+    <div id="quiz"></div>
+
+    <template id="quiz-template">
+      <div class="question">
+        <h3></h3>
+        <form>
+          <ul class="answers"></ul>
+        </form>
+      </div>
+    </template>
+
+    <div class="result">
+      <div id="corrects">
+        <strong>Corrects</strong>
+        <span>0 of 10</span>
+      </div>
+
+      <dialog>
+        <h1>Wrong!!</h1>
+        <span>Press <strong>ESC</strong> to try again.</span>
+      </dialog>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>
