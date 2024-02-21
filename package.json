@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/lucas-olvra/project-quiz#readme",
   "dependencies": {
-    "@vercel/edge": "^1.1.1"
+    "@vercel/edge": "^0.1.2"
   }
 }
