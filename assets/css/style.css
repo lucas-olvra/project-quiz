@@ -94,11 +94,11 @@ input {
   position: sticky;
   top: 0;
   padding: 12px;
+  margin-top: 20px;
 }
 
 dialog {
   background-color: rgb(212, 50, 50);
-  animation: rotation 0.5s ease infinite;
   border-radius: 4px;
   position: fixed;
   top: 50%;
@@ -107,20 +107,7 @@ dialog {
   color: #fff;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0eg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.close {
+  cursor: pointer;
+  height: 27px;
 }

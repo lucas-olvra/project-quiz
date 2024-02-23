@@ -9,6 +9,7 @@ const quiz = document.querySelector("#quiz");
 const template = document.querySelector("#quiz-template");
 const selectElement = document.querySelector("#select");
 const showTotal = document.querySelector("#corrects span");
+const showWrong = document.querySelector("dialog");
 
 const quizDataMap = new Map([
   ["0", questions],
@@ -25,9 +26,13 @@ selectElement.addEventListener("change", () => {
 
 selectElement.dispatchEvent(new Event("change"));
 
+const closeButton = document.querySelector(".close");
+closeButton.addEventListener("click", () => {
+  showWrong.close();
+});
+
 function displayQuiz(questions) {
   const totalQuestions = questions.length;
-  const showWrong = document.querySelector("dialog");
 
   quiz.innerHTML = "";
 
@@ -43,12 +48,15 @@ function displayQuiz(questions) {
       const li = document.createElement("li");
       const input = document.createElement("input");
       const label = document.createElement("label");
+      const span = document.createElement("span");
 
       input.setAttribute("type", "radio");
       input.setAttribute("name", groupName);
       input.setAttribute("value", answerIndex);
+      input.setAttribute("data-testid", "inputs");
 
-      label.textContent = answer;
+      span.textContent = answer;
+      label.appendChild(span);
       label.prepend(input);
 
       li.appendChild(label);
