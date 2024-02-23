@@ -2,8 +2,7 @@
 
 describe("Project Quiz - Select your language or tool and practice!", () => {
   beforeEach(() => {
-    // cy.visit("https://project-quiz-eight-mu.vercel.app/");
-    cy.visit("./index.html");
+    cy.visit("https://project-quiz-eight-mu.vercel.app/");
   });
   it("Check the application title", () => {
     cy.title().should("be.equal", "Quiz");

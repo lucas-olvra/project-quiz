@@ -6,10 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          config-file: cypress.config.js
-          record: false
-          headless: true
 
       - name: Cypress run
         uses: cypress-io/github-action@v4.1.0
