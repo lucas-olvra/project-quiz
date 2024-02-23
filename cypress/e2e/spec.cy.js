@@ -2,7 +2,8 @@
 
 describe("Project Quiz - Select your language or tool and practice!", () => {
   beforeEach(() => {
-    cy.visit("https://project-quiz-eight-mu.vercel.app/");
+    // cy.visit("https://project-quiz-eight-mu.vercel.app/");
+    cy.visit("./index.html");
   });
   it("Check the application title", () => {
     cy.title().should("be.equal", "Quiz");
@@ -38,7 +39,6 @@ describe("Project Quiz - Select your language or tool and practice!", () => {
           }
         });
       });
-
     cy.get("#corrects").children("span").should("contain.text", "10 of 10");
   });
 
