@@ -23,7 +23,6 @@ describe("Project Quiz - Select your language or tool and practice!", () => {
       "string.length",
     ];
 
-    // Encontra o formulário e procura por todos os elementos input dentro dele
     cy.get("form")
       .find("input")
       .each(($input) => {
